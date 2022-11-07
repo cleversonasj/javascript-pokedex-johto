@@ -6,6 +6,10 @@
   margin: 0;
 }
 
+#songBtn{
+  display: none;
+}
+
 .normal{
   background-color: #a6a877
 }

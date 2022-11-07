@@ -2,6 +2,8 @@ const pokemonList = document.getElementById('pokemonList');
 const loadMoreBtn = document.getElementById('loadMore');
 let offset = 0;
 const limit = 16;
+const songBtn = document.getElementById('songBtn');
+
 
 function getPokemon(pokemon){
   return `
@@ -30,8 +32,11 @@ loadMoreBtn.addEventListener('click', () => {
   offset += limit;
   if(offset < 240){
     loadMorePokemons(offset, limit);
+    songBtn.play();
+
   }else{
     loadMorePokemons(offset, 11);
     loadMoreBtn.style.display = 'none';
+    songBtn.play();
   }
 });
